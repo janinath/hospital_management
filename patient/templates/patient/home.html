@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+  font-family: 'lato', sans-serif;
+}
+        .row{
+            --bs-gutter-x: -0.5rem;
+        }
+        .heading,.doctors{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .aboutus h2,.aboutus p{
+            text-align: center;
+        }
+        .aboutus p{
+            font-weight: bolder;
+            font-size: 20px;
+        }
+        .col-12{
+            border-radius: 10px;
+        }
+        .doctors{
+            margin-top: 15px;
+        }
+        .loginhead{
+            margin-bottom: 20px;
+        }
+        .logincontent{
+            margin-bottom: 50px;
+        }
+        .loginrow{
+            background-color: rgb(33, 125, 132);
+
+        }
+        .loginrow h2,.loginrow label,.loginrow p{
+            color: white;
+        }
+        .logincontent a{
+            font-size: 20px;
+            color: aliceblue;
+            font-weight: bold;
+        }
+        .signuprow{
+            background-color: rgb(18, 110, 70);
+        }
+        .signuprow h2,.signuprow label{
+            color: whitesmoke;
+        }
+        .booking{
+            margin-bottom: 90px;
+        }
+        .bookingrow{
+            background-color: rgb(73, 108, 112);
+        }
+    </style>
+</head>
+<body>
+    <div class="contaniner-fluid">
+        <!-- navbar -->
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#">Hospital Management</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'patient:home' %}">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#about">About Us</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#contact">Contact Us</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'patient:list' %}">Booking Confirmation</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'patient:login' %}">Login</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'doctor:doctorlogin' %}">Doctor Login</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'patient:booking' %}">Appointment Here</a>
+                          </li>
+                       
+                          
+                        </ul>
+                       
+                        
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+        <!-- navbar end -->
+{% block content %}
+<!-- main content -->
+    <div class="row">
+        <div class="col-12 heading" style="background-image: url(https://images.unsplash.com/photo-1533035353720-f1c6a75cd8ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFja2dyb3VuZCUyMGltYWdlJTIwZm9yJTIwd2Vic2l0ZXxlbnwwfHwwfHx8MA%3D%3D);height: 450px;">
+            <h1>Hospital Management System</h1> 
+        
+        </div>
+    </div>
+<!-- main content end -->
+
+<!-- aboutus -->
+    <div class="row">
+    <div class="col-12 aboutus" style="background-image: url(https://media.istockphoto.com/id/1134005090/photo/abstract-blur-inside-interior-of-modern-cleaning-workplace-in-blue-color-in-panoramic.jpg?s=612x612&w=0&k=20&c=4KXm9eVfuZTwi3vHcbf4xXNQApMPRHbnWH-yZfkVC-4=);">
+        <h2 id="about">About Us</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea facilis accusamus maxime quia illo accusantium ipsam unde, voluptatem explicabo minus consequatur deleniti alias eaque. Quasi non, quidem corporis modi incidunt sed beatae cumque facere perspiciatis deserunt quas sapiente sunt et placeat expedita error praesentium ullam minus fugiat quos. Temporibus, nobis.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est odit perspiciatis dolores eos at, doloremque optio voluptatibus eveniet possimus error quibusdam officiis, recusandae aperiam consequatur eaque accusantium, illo debitis laboriosam.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea facilis accusamus maxime quia illo accusantium ipsam unde, voluptatem explicabo minus consequatur deleniti alias eaque. Quasi non, quidem corporis modi incidunt sed beatae cumque facere perspiciatis deserunt quas sapiente sunt et placeat expedita error praesentium ullam minus fugiat quos. Temporibus, nobis.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est odit perspiciatis dolores eos at, doloremque optio voluptatibus eveniet possimus error quibusdam officiis, recusandae aperiam consequatur eaque accusantium, illo debitis laboriosam.</p>
+
+    
+    </div>
+    </div>
+<!-- about us end -->
+
+<div class="row">
+    <div class="col-12 doctors">
+        <h2>Our Doctors</h2>
+    </div>
+</div>
+
+<!-- doc images -->
+    <div class="row">
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img src="https://media.istockphoto.com/id/671290874/photo/portrait-of-a-female-doctor.webp?b=1&s=170667a&w=0&k=20&c=xq9dTuHur5oQiRnYIQqCtw4w9aIO9A8sjDI5jzgxCh0=" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Doctor's Name</h5>
+                  <p class="card-text">Specialization </p>
+                </div>
+              </div>
+        </div>
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img src="https://media.istockphoto.com/id/1172429034/photo/managing-her-daily-medical-duties.webp?b=1&s=170667a&w=0&k=20&c=yhK57sPHnxOLoQu3oawxMmB73LSXLlKTPIZq7FwFG-c=" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Doctor's Name</h5>
+                  <p class="card-text">Specialization </p>
+                </div>
+              </div>
+        </div>
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img src="https://media.istockphoto.com/id/1270790502/photo/medical-concept-of-indian-beautiful-female-doctor-with-note-book.webp?b=1&s=170667a&w=0&k=20&c=1SeKJzjB9loT2tW4wzxQ5S-iNMz31-iarSLka2j1hyw=" class="card-img-top" height="191px" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Doctor's Name</h5>
+                  <p class="card-text">Specialization </p>
+                </div>
+              </div>
+        </div>
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img src="https://media.istockphoto.com/id/1294124736/photo/portrait-of-female-doctor-working-in-clinic-stock-photo.webp?b=1&s=170667a&w=0&k=20&c=-e9FCI1bLUBGKuUns8Pn0v06aZrZ1BSVwTZVbn-W2SU=" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Doctor's Name</h5>
+                  <p class="card-text">Specialization </p>
+                </div>
+              </div>
+        </div>
+    </div>
+<!-- doc images end -->
+<div class="row">
+    <div class="col-12 doctors">
+        <h2 id="contact">Contact Us</h2>
+    </div>
+</div>
+<!-- contact -->
+<div class="row">
+    <div class="col-md-3 col-sm-1"></div>
+    <div class="col-md-6 col-sm-10">
+        <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"></label>
+                <textarea name="" id="" cols="77" rows="10" placeholder="Enter Your Message Here"></textarea>
+              </div>
+           
+            
+            
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+    <div class="col-md-3 col-sm-1"></div>
+</div>
+<!-- contact end -->
+
+{% endblock %}
+        <!-- footer -->
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-light bg-light">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#">
+                        <img src="https://media.istockphoto.com/id/1858905125/photo/health-insurance-concept-protection-health-care-medical-doctor-palms-protects-the-heart.jpg?s=612x612&w=0&k=20&c=6kKCBpZ3bbLP5Fc8T5Bqcq_LajPwAI0_ao1RgEv2BQI=" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                        Hospital Name
+                      </a>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+        <!-- footer end -->
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
